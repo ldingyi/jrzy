@@ -8,7 +8,28 @@ const routes = [
   {
     path:'/',
     name:'home',
-    component:() =>import('../views/Home')
+    component:() =>import('../views/Home'),
+    children:[
+      {
+        path: '/',
+        name: 'main1',
+        component:()=>import('../components/main1')
+      },
+      {
+        path:'/main2',
+        name:'main2',
+        component:()=>import('../components/main2')
+      },
+      {
+        path:'/main3',
+        name:'main3',
+        component:()=>import('../components/main3')
+      },
+
+
+    ]
+
+
   }
 
 ]
